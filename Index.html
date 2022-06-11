@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>Border-Radius</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="controls">
+            <h2>All Corners</h2>
+            <div class="range">
+                <div class="field">
+                    <div class="value left">0</div>
+                    <input type="range" value="10" min="0" max="200" id="all_corners" oninput="allCr()">
+                    <div class="value right">200</div>
+                </div>
+            </div>
+
+            <h2>Top left corner</h2>
+            <div class="range">
+                <div class="field">
+                    <div class="value left">0</div>
+                    <input type="range" value="10" min="0" max="200" id="top_left" oninput="topLft()">
+                    <div class="value right">200</div>
+                </div>
+            </div>
+
+            <h2>Top right corner</h2>
+            <div class="range">
+                <div class="field">
+                    <div class="value left">0</div>
+                    <input type="range" value="10" min="0" max="200" id="top_right" oninput="topRt()">
+                    <div class="value right">200</div>
+                </div>
+            </div>
+
+            <h2>Bottom left corner</h2>
+            <div class="range">
+                <div class="field">
+                    <div class="value left">0</div>
+                    <input type="range" value="10" min="0" max="200" id="bottom_left" oninput="BottomLft()">
+                    <div class="value right">200</div>
+                </div>
+            </div>
+
+            <h2>Bottom right corner</h2>
+            <div class="range">
+                <div class="field">
+                    <div class="value left">0</div>
+                    <input type="range" value="10" min="0" max="200" id="bottom_right" oninput="BottomRt()">
+                    <div class="value right">200</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="block" id="block">
+
+            </div>
+            <div class="out">
+                <h3>CHANGE THE CORNERS OF SQUARE AS YOU WANT !!</h3>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function topLft() {
+            let a = document.getElementById('top_left').value
+            let b = document.getElementById('block').style
+            b.borderTopLeftRadius = `${a}px`
+        }
+
+        function allCr() {
+            let a = document.getElementById('all_corners').value
+            let b = document.getElementById('block').style
+            b.borderRadius = `${a}px`
+        }
+
+        function topRt() {
+            let a = document.getElementById('top_right').value
+            let b = document.getElementById('block').style
+            b.borderTopRightRadius = `${a}px`
+        }
+
+        function BottomLft() {
+            let a = document.getElementById('bottom_left').value
+            let b = document.getElementById('block').style
+            b.borderBottomLeftRadius = `${a}px`
+        }
+
+        function BottomRt() {
+            let a = document.getElementById('bottom_right').value
+            let b = document.getElementById('block').style
+            b.borderBottomRightRadius = `${a}px`
+        }
+    </script>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
